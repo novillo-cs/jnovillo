@@ -1,0 +1,95 @@
+body {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+table {
+  border : 1px solid;
+  border-collapse : collapse;
+}
+td,th {
+  border : 1px solid;
+  border-collapse : collapse;
+}
+
+pre{
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+  font-size: large;
+}
+
+.code{
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+  font-size: large;
+  background-color: #f2f2f2;
+}
+
+code{
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+  font-size: large;
+  background-color: #f2f2f2;
+}
+pre > code {
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+  font-size: large;
+
+}
+
+header {
+    height: 2em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 8px 0px #27887869;
+    background-color: #278878c9;
+    color: white;
+}
+
+main {
+    padding: .5em;
+    display:flex;
+    justify-content: flex-start;
+}
+#leftColumn {
+    width: 20%;
+}
+
+#rightColumn {
+    width: 80%;
+}
+ul {
+    list-style-type: circle;
+    padding-left: 15px;
+}
+ol {
+    list-style-type: decimal;
+    padding-left: 15px;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#className {
+    font-weight: bold;
+    font-size: larger;
+}
+
+#links span {
+    margin: 0 .5em;
+}
+
+
+
+#thluffy {
+    width: 4em;
+    padding-right: 0.5em;
+}
+
+.contentBlock {
+    margin: .2em .5em;
+    padding: 0.1em .5em;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 3px;
+}
