@@ -41,8 +41,45 @@
   <div class="flex-grow-1 p-2 overflow-scroll" id="rightSide">
     <div class="d-flex">
         <div class="collapse show" id="gitssh" data-bs-parent="#rightSide">
-            <h1>Steps</h1>
-            <p>hello</p>
+            <p>Follow these steps to create a ssh, connect to GitHub with SSH and clone your repository.</p>
+            <ol>
+                <li>
+                    Create your ssh key: Open your terminal and type
+                    <pre>ssh-keygen -t rsa</pre>
+                    Check that your key was generated:
+                    <pre>
+                    cd .ssh/
+                    ls
+                    </pre>
+                    You should see your private key (id_rsa) and public key (id_rsa.pub) inside that directory.
+                </li>
+                <li>
+                    Log in to your GitHub accout.
+                    Click on your profile picture (right-top). You will see a menu click on Settings.
+                    You will see a menu on the left click on SSH and GPG keys and click on Add New SSH key.
+                    You will give a title to that key. Key type shoud be "Authentication Key" and copy your public key (the content inside the file id_rsa.pub) in the field "Key".
+                    
+ 
+                </li>
+                <li>
+                    Go to the following link and test your SSH connection
+                    https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection
+                </li>
+           
+                <li>
+                   Let's clone your repository in your local computer:
+                   Go to your assignments repository that we created for this class in GitHub. You will see a green button "Code", click there and select SSH to have the appropiate link that will allow you to clone your repository and copy the link you see there.
+                    
+                </li>
+                <li>
+                    Go to your terminal and go inside the folder you want to clone your repository and type:
+                    <git>git clone <HERE PASTE THE LINK YOU COPIED FROM GITHUB></git>
+                    
+                 </li>
+                 <li>
+                     Go inside the folder that appears after you excecute the clone command and you will see the files you have on your GitHub repository.
+                 </li>
+            </ol>
         </div>
         
         <div class="collapse" id="homework" data-bs-parent="#rightSide">
