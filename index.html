@@ -13,6 +13,16 @@
       <span class="fs-5 fw-semibold">APCSA</span>
     </a>
     <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          Lessons
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a data-bs-toggle="collapse" href="#notes" class="link-dark d-inline-flex text-decoration-none rounded">Notes</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="mb-1">
         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse"
                 data-bs-target="#home-collapse" aria-expanded="false">Tools
@@ -145,6 +155,55 @@
 
         <div class="collapse" id="contact" data-bs-parent="#rightSide">
             <p><b>Email:</b> ms.jnovillo@gmail.com </p>
+        </div>
+    
+        <div class="collapse" id="notes" data-bs-parent="#rightSide">
+            <h1>Scanner</h1>
+            <p>Import the java.util.Scanner package before we can use the Scanner class.</p>
+
+            <code>import java.util.Scanner;</code>
+
+            <p>Create a Scanner Object in Java</p>
+
+            <p>You can use a scanner on files, strings, or user input.</p>
+
+            <p>Scanner sc = new Scanner("Some String (or File) Here");</p>
+            
+            <b>Scanner methods:</b>
+            
+            <ul>
+                
+            <li>hasNext() - Returns true if this Scanner has another token in its input. (Does not consume that text)</li>
+            <li>hasNextLine() - Returns true if there is another line in the input of this Scanner. (Does not consume that text)</li>
+            <li>hasNextInt() - Returns true if the next token in this Scanner's input is an int when using the nextInt() method (Does not consume that text)</li>
+            <li>There are hasNext___() - for all the nextTYPE() methods.</li>
+            <li>next() - reads a word from the Scanner</li>
+            <li>nextLine() - reads a line of text from the Scanner</li>
+            <li>nextInt() - reads an int value from the Scanner (Does not consume that text)</li>
+            <li>nextDouble() - reads a double value from the Scanner</li>
+            <li>nextBoolean() - reads a boolean value from the Scanner</li>
+            </ul>
+            
+            <code>
+                class Main {
+  public static void main(String[] args) {
+    String text = "This is a sample\nOf how to read\ntext!";
+
+    // creates a Scanner object to read throug the String
+    Scanner input = new Scanner(text);
+
+    //you don't want a for loop here unless you know the size of the data set
+
+    while(input.hasNext()){
+      System.out.println(input.next());
+    }
+    //Alternate loop:
+    //while(input.hasNextLine()){
+      //  System.out.println(input.nextLine());
+      //}
+    }
+  }
+            </code>
         </div>
      
     </div>
