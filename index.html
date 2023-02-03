@@ -185,7 +185,7 @@
             </ul>
             
             <pre>
-                class Main {
+class Main {
   public static void main(String[] args) {
     String text = "This is a sample\nOf how to read\ntext!";
 
@@ -203,7 +203,47 @@
       //}
     }
   }
+ 
             </pre>
+   
+            
+            
+            <p>Add the values in this string using Integer.parseInt()</p>
+            
+            
+            
+            <p>Scanner input = new Scanner("10 14 9 -3 0");</p>
+            
+            <h1>Files</h1>
+<p>In addition to the Scanner, File and FileNotFoundException should be imported from java.io . </p>
+            
+            
+            
+            <pre>
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+public class ReadFile {
+  public static void main(String[] args) {
+    try {
+      File file = new File("PUT_FILENAME_HERE");
+      Scanner input = new Scanner(file);
+      while (input.hasNextLine()) {
+        String line = input.nextLine();
+        System.out.println(line);
+      }
+      input.close();//releases the file from your program
+
+    } catch (FileNotFoundException ex) {
+      //File not found
+    }
+  }
+}
+            </pre>
+            
+            <p>
+            Try to open a file and print every other line of
+            </p>
         </div>
      
     </div>
