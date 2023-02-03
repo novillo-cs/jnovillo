@@ -244,6 +244,39 @@ public class ReadFile {
             <p>
             Try to open a file and print every other line of
             </p>
+            
+            <h1>USACO Problems:</h1>
+<h2><b>1. Bronze</b></h2>
+<p>Cow Stomping / Lake Making</p>
+
+<p>In order to understand this problem you need to read it multiple times. There are references to variables that are explained later in the documentation, and you have to understand all of the text for cross referencing purposes.</p>
+
+
+<p>Problem 12: Lake Making [Rob Kolstad, 2008]</p>
+
+<p>1.1 description</p>
+
+<p>Farmer John wants his cows to help him make a lake. He has mapped the pasture where he wants to build the lake by creating an R (3 <= R <= 100) row by C (3 <= C <= 100) column grid of six foot by six foot squares and then by determining the average elevation (10 <= elev_rc <= 5000) in inches for each square.</p>
+
+
+<p>Additionally, he has trained the cows in "stomp digging". The burly bovines travel in a herd that just exactly covers a 3x3 grid of squares to a grid whose upper left coordinate is R_s,C_s (1 <= R_s <= R-2; 1 <= C_s <= C-2). The cows then stomp the ground to push it down D_s (1 <= D_s <= 40) inches. The cows are quite meticulous; the cows at lower elevations will not commence stomping until the rest of the herd has joined them. Thus, not all the 3x3 grid is necessarily stomped (or perhaps some part is stomped less than some other part).</p>
+
+
+<p>Given an initial set of elevations, an ordered set of N (1 <= N <= 20000) stomp digging instructions, and an elevation E (0 <= E <= 5000) for the lake's final water level, determine the volume of water (in cubic inches) that the lake will hold. It is guaranteed that the answer will not exceed 2,000,000,000. Presume that the edge of the lake contains barriers so that water can not spill over the border.</p>
+               
+      
+            
+<h2><b>2. SILVER</b></h2>
+<p>Cow Travelling [Aram Shatakhtsyan, 2007]</p>
+<p>This problem the algorithm is more difficult than the reading. You should still read it multiple times.</p>
+
+<p>2.1 description</p>
+<p>Searching for the very best grass, the cows are travelling about the pasture which is represented as a grid with N rows and M columns (2 <= N <= 100; 2 <= M <= 100). Keen observer Farmer John has recorded Bessie's position as (R1, C1) at a certain time and then as (R2, C2) exactly T (0 < T <= 15) seconds later. He's not sure if she passed through (R2, C2) before T seconds, but he knows she is there at time T.</p>
+
+<p>FJ wants a program that uses this information to calculate an integer S that is the number of ways a cow can go from (R1, C1) to (R2, C2) exactly in T seconds. Every second, a cow can travel from any position to a vertically or horizontally neighboring position in the pasture each second (no resting for the cows). Of course, the pasture has trees through which no cow can travel.</p>
+
+<p>Given a map with '.'s for open pasture space and '*' for trees, calculate the number of possible ways to travel from (R1, C1) to (R2, C2) in T seconds.</p>            
+            
         </div>
      
     </div>
