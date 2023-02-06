@@ -201,42 +201,42 @@
             
 <p>Consider a small 4 x 6 pasture to be turned into a lake. Its initial elevations (annotated with row/column numbers) are:</p>
 
-column: 01 02 03 04 05 06
-row 1 : 28 25 20 32 34 36
-row 2 : 27 25 20 20 30 34
-row 3 : 24 20 20 20 20 30
-row 4 : 20 20 14 14 20 20
+<p>column: 01 02 03 04 05 06</p>
+<p>row 1 : 28 25 20 32 34 36</p>
+<p>row 2 : 27 25 20 20 30 34</p>
+<p>row 3 : 24 20 20 20 20 30</p>
+<p>row 4 : 20 20 14 14 20 20</p>
   
 <p>Interpreting the map, we see a hill in the upper right corner that rises to elevation 36; a small hill also rises to elevation 28 in the upper left corner. The middle of row 4 has a slight depression. After the cow-stomping instruction "1 4 4", the pasture has these elevations:</p>
 
-column:  01 02 03 04 05 06
-row 1 :  28 25 20 32 32 32
-row 2 :  27 25 20 20 30 32
-row 3 :  24 20 20 20 20 30
-row 4 :  20 20 14 14 20 20
+<p>column:  01 02 03 04 05 06</p>
+<p>row 1 :  28 25 20 32 32 32</p>
+<p>row 2 :  27 25 20 20 30 32</p>
+<p>row 3 :  24 20 20 20 20 30</p>
+<p>row 4 :  20 20 14 14 20 20</p>
   
 <p>Note that only three squares were stomped down. The other six sets of cows were waiting for the stompers to get to their level, which never happened. After stomping down the upper left corner with this instruction "1 1 10", the pasture looks like this:</p>
 
-column:  01 02 03 04 05 06
-row 1 :  18 18 18 32 32 32
-row 2 :  18 18 18 20 30 32
-row 3 :  18 18 18 20 20 30
-row 4 :  20 20 14 14 20 20
+<p>column:  01 02 03 04 05 06</p>
+<p>row 1 :  18 18 18 32 32 32</p>
+<p>row 2 :  18 18 18 20 30 32</p>
+<p>row 3 :  18 18 18 20 20 30</p>
+<p>row 4 :  20 20 14 14 20 20</p>
   
 <p>If the final elevation of the lake is to be 22 inches, the pasture has these depths:</p>
 
-column:   1  2  3  4  5  6
-row 1 :   4  4  4 - - -
-row 2 :   4  4  4  2 - -
-row 3 :   4  4  4  2  2 -
-row 4 :   2  2  8  8  2  2
+<p>column:   1  2  3  4  5  6</p>
+<p>row 1 :   4  4  4 - - -</p>
+<p>row 2 :   4  4  4  2 - -</p>
+<p>row 3 :   4  4  4  2  2 -</p>
+<p>row 4 :   2  2  8  8  2  2</p>
   
 <p>This yields a total aggregated depth of 66 inches. Calculate the volume by multiplying 66 x 6 feet x 6 feet = 66 inches x 72 inches x 72 inches = 342,144 cubic inches.</p>
 
 <p><b>program specifications</b></p>
 Write a program to automate this calculation.
 
-<p><b>INPUT FORMAT:<p><b>
+<p><b>INPUT FORMAT:</b></p>
 The name of a file with the following format:
 
 * Line 1: Four space-separated integers: R, C, E, N
@@ -247,13 +247,13 @@ The name of a file with the following format:
 
 <p><b>SAMPLE INPUT (file makelake.in):<p><b>
 
-4 6 22 2
-28 25 20 32 34 36
-27 25 20 20 30 34
-24 20 20 20 20 30
-20 20 14 14 20 20
-1 4 4
-1 1 10
+<p>4 6 22 2</p>
+<p>28 25 20 32 34 36</p>
+<p>27 25 20 20 30 34</p>
+<p>24 20 20 20 20 30</p>
+<p>20 20 14 14 20 20</p>
+<p>1 4 4</p>
+<p>1 1 10</p>
 <p><b>INPUT DETAILS:</b> As per the example from the text.</p>
 
 <p><b>OUTPUT FORMAT:<p><b>
@@ -287,12 +287,12 @@ The name of a file in the following format
 * Line N+2: Four space-separated integers: R1, C1, R2, and C2.
 
 <p><b>SAMPLE INPUT (file ctravel.in):</p></b>
-4 5 6
-...*.
-...*.
-.....
-.....
-1 3 1 5
+<p>4 5 6</p>
+<p>...*.</p>
+<p>...*.</p>
+<p>.....</p>
+<p>.....</p>
+<p>1 3 1 5</p>
     
 <p><b>INPUT DETAILS:</p></b>
 The pasture is 4 rows by 5 column. The cow travels from row 1, column 3 to row 1, column 5, which takes exactly 6 seconds.
