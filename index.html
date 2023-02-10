@@ -203,7 +203,66 @@
             <p><a href="https://github.com/novillo-cs/apcsa_material/blob/main/lessons/ArrayList/ArrayList.pptx">Slides</a></p>
             <p><a href="https://github.com/novillo-cs/apcsa_material/tree/main/classwork/2023-02-10">Practice</a></p>
             
+            <h1>Exceptions</h1>
             
+            <p>An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions.</p>
+
+            <p>When an exception occurs within a class or method, the method/class creates an exception object and hands the results to the runtime system (JVM).</p>
+
+            <h2>Exception Handling</h2>
+
+            <p>Exception Handling in Java is one of the effective means to handle the runtime errors so that the regular flow of the application can be preserved.</p>
+
+            <p>Some built-in exceptions in Java:</p>
+            <ul>
+            <li>Exception: This is the parent class of other exceptions</li>
+            <li>ArrayIndexOutOfBoundsException</li>
+            <li>IndexOutOfBoundsException</li>
+            <li>IllegalArgumentException</li>
+            <li>IllegalStateException</li>
+            <li>StringIndexOutOfBoundsException</li>
+            <li>ArithmeticException</li>
+            <li>ClassNotFoundException</li>
+            <li>FileNotFoundException</li>
+            <li>IOException</li>
+            <li>SQLException</li>
+            <li>NullPointerException</li>
+            <li>NoSuchMethodException</li>
+            <li>NumberFormatException</li>
+            </ul>
+            
+            <p>Exceptions can be caught and handled by the program. When an exception occurs within a method, it creates an object. This object is called the exception object. It contains information about the exception, such as the name and description of the exception and the state of the program when the exception occurred.</p>
+
+            <h2>How can Java catch exceptions</h2>
+            <ul>
+            <li><p><b>Try and Catch statements: </b>You use try to define a block of code to be tested for error when it runs. The catch statement defines a block of code that is executed if there is an error in the try block.
+You can use the try/catch block to handle exceptions. You know there can be certain errors and you can have an exception</p>
+            <pre>
+            try{
+                // block of code that MIGHT throw an exception.
+            }catch(ExceptionType variable){
+                // block of code executed when there is an ExceptionType
+            }
+            </pre>
+            <p>You may chain multiple catch statement if your code throws more that one exception:</p>
+            <pre>
+            try{
+                // block of code that MIGHT throw an exception.
+            }catch(ExceptionType variable){
+                // block of code executed when there is an ExceptionType
+            }catch(AnotherExceptionType variable){
+                // block of code executed when there is an AnotherExceptionType
+            }
+
+            </pre>
+            </li>
+            <li>
+            <p>A method that specifies that it can throw the exception. The method must provide a <i><b>throws</b></i> clause that lists the exception.</p>
+            <p>It specifies the exceptions that a method can throw to the caller and does not handle itself. </p>
+    
+            <p>We use the “throws” keyword to declare the exception with the method declaration. And “throw” is used to force an exception to be thrown.</p>
+            </li>
+            </ul>
             <h1>USACO Problems:</h1>
 <h2><b>1. Bronze</b></h2>
             
