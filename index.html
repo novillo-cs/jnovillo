@@ -263,6 +263,142 @@ You can use the try/catch block to handle exceptions. You know there can be cert
             <p>We use the “throws” keyword to declare the exception with the method declaration. And “throw” is used to force an exception to be thrown.</p>
             </li>
             </ul>
+            
+            <h2>Advantages of exceptions</h2>
+            <ul>
+                <li><p><b>Separating Error-Handling Code from "Regular" Code</b></p>
+                <p>Exceptions provide the means to separate the details of what to do when something out of the ordinary happens from the main logic of a program. In traditional programming, error detection, reporting, and handling often lead to confusing spaghetti code. For example, consider the pseudocode method here that reads an entire file into memory.</p>
+                <pre>
+                readFile {
+                    open the file;
+                    determine its size;
+                    allocate that much memory;
+                    read the file into memory;
+                    close the file;
+                }
+                </pre>
+                <p>Without using exceptions. The code will look like this:</p
+                    
+                <pre>
+                    errorCodeType readFile {
+                        initialize errorCode = 0;
+                        open the file;
+                        if (theFileIsOpen) {
+                            determine the length of the file;
+                            if (gotTheFileLength) {
+                                allocate that much memory;
+                                if (gotEnoughMemory) {
+                                    read the file into memory;
+                                    if (readFailed) {
+                                        errorCode = -1;
+                                    }
+                                } else {
+                                    errorCode = -2;
+                                }
+                            } else {
+                                errorCode = -3;
+                            }
+                            close the file;
+                            if (theFileDidntClose && errorCode == 0) {
+                                errorCode = -4;
+                            } else {
+                                errorCode = errorCode and -4;
+                            }
+                        } else {
+                            errorCode = -5;
+                        }
+                        return errorCode;
+                    }
+
+                </pre>
+                
+                <p>Using exceptions the code is organized more efficiently:</p>
+                <pre>
+                readFile {
+                    try {
+                        open the file;
+                        determine its size;
+                        allocate that much memory;
+                        read the file into memory;
+                        close the file;
+                    } catch (fileOpenFailed) {
+                       doSomething;
+                    } catch (sizeDeterminationFailed) {
+                        doSomething;
+                    } catch (memoryAllocationFailed) {
+                        doSomething;
+                    } catch (readFailed) {
+                        doSomething;
+                    } catch (fileCloseFailed) {
+                        doSomething;
+                    }
+                }
+
+                </pre>
+                </li>
+
+                <li><p><b>Propagating Errors Up the Call Stack</b></p>
+                <pre>
+                method1 {
+                    call method2;
+                }
+                method2 {
+                    call method3;
+                }
+                method3 {
+                    call readFile;
+                </pre>
+                <p>Without using exceptions, the code will look like this:</p>
+                <pre>
+                method1 {
+                    errorCodeType error;
+                    error = call method2;
+                    if (error)
+                        doErrorProcessing;
+                    else
+                        proceed;
+                }
+
+                errorCodeType method2 {
+                    errorCodeType error;
+                    error = call method3;
+                    if (error)
+                        return error;
+                    else
+                        proceed;
+                }
+
+                errorCodeType method3 {
+                    errorCodeType error;
+                    error = call readFile;
+                    if (error)
+                        return error;
+                    else
+                        proceed;
+                }
+
+                </pre>
+                <p>Using exceptions:</p>
+                <pre>
+                method1 {
+                    try {
+                        call method2;
+                    } catch (exception e) {
+                        doErrorProcessing;
+                    }
+                }
+
+                method2 throws exception {
+                    call method3;
+                }
+
+                method3 throws exception {
+                    call readFile;
+                }
+
+                </pre>
+                </li>
+
             <h1>USACO Problems:</h1>
 <h2><b>1. Bronze</b></h2>
             
